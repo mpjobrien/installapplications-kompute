@@ -31,26 +31,27 @@
   ],
   "userland": [
     {
-      "file": "/Library/installapplications/userscripts/Installomator-1stRun.sh",
-      "hash": "3821e17a1682c0135470c18b6dc31f7a95a78c826e670097318dd9b03f5fa0e9",
-      "name": "Kompute 1st Run",
-      "type": "userscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun.sh"
-    },
-    {
-      "file": "/Library/installapplications/userscripts/Installomator-1stRunDialogProgress.sh",
-      "hash": "73867d7e7e3affec165ca7e80d2569fc9829201de1262260188aa45bea917419",
-      "name": "Kompute 1st Run Dialog Progress",
-      "type": "userscript",
-      "url": "./scripts/user/Installomator-1stRunDialogProgress.sh"
-    },
-    {
       "donotwait": true,
       "file": "/Library/installapplications/caffeinate.py",
       "hash": "f0b524e794c3ba0cef1e9308cf0c0669d7cb090e4b690ce20360607be810f6c6",
       "name": "Caffeinate Machine",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/caffeinate.py"
+    },
+    {
+      "donotwait": true,
+      "file": "/Library/installapplications/userscripts/Installomator-1stRun-Bootstrap.sh",
+      "hash": "bf771926ec38f085e988fe89c8dac9cd84b073ad66f68c655b7619dcda022b78",
+      "name": "Kompute 1st Run",
+      "type": "userscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun-Bootstrap.sh"
+    },
+    {
+      "file": "/Library/installapplications/userscripts/Installomator-1stRunDialogProgress.sh",
+      "hash": "73867d7e7e3affec165ca7e80d2569fc9829201de1262260188aa45bea917419",
+      "name": "Kompute 1st Run Dialog Progress",
+      "type": "userscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
     }
   ]
 }
