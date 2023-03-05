@@ -10,8 +10,10 @@ apps=(
     "Web Browsers,/Applications/Google Chrome.app"
     "Microsoft 365 Suite,/Applications/Microsoft Word.app"
     "Adobe Creative Cloud,/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app"
+    "Apple Classroom,/Applications/Classroom.app"
     "Video Tools,/Applications/VLC.app"
     "Support Tools,/Applications/Support.app"
+    "Printers,/Applications/PCClient.app"
     "Dock Configuration,/usr/local/bin/dockutil"
     "Desktop Presets,/usr/local/bin/desktoppr"
 )
@@ -60,7 +62,7 @@ errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
 bannerText="Welcome to your new Mac, ${loggedInUserFirstname}!"
 overlayicon="/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/AppIcon.icns"
-helpmessage="If you need assistance, please contact your IT Team:  \n- **Email:** schoolhelp@bne.catholic.edu.au \n\n**Computer Information:** \n\n- **Operating System:**  ${macOSproductVersion} ($macOSbuildVersion)  \n- **Serial Number:** ${serialNumber}  \n- **Dialog:** ${dialogVersion}  \n- **Started:** ${timestamp}"
+helpmessage="If you need assistance, please contact the IT:  \n- **Telephone:** +1 (801) 555-1212  \n- **Email:** schoolhelp@bne.catholic.edu.au  \n- **Knowledge Base Article:** KB0057050  \n\n**Computer Information:** \n\n- **Operating System:**  ${macOSproductVersion} ($macOSbuildVersion)  \n- **Serial Number:** ${serialNumber}  \n- **Dialog:** ${dialogVersion}  \n- **Started:** ${timestamp}"
 infobox="Analyzing input …" # Customize at "Update Setup Your Mac's infobox"
 loggedInUser=$( scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
 serialNumber=$(system_profiler SPHardwareDataType | awk '/Serial Number/{print $4}')
@@ -232,7 +234,7 @@ function appCheck(){
         sleep 2
     done
     dialog_command "progresstext: Install of “$(echo "$app" | cut -d ',' -f1)” complete"
-    dialog_command "listitem: $(echo "$app" | cut -d ',' -f1): ✅"
+    dialog_command "listitem: $(echo "$app" | cut -d ',' -f1): Complete ✅"
     progress_index=$(defaults read $counterFile step)
     progress_index=$(( progress_index + 1 ))
     defaults write $counterFile step -int $progress_index
@@ -373,12 +375,12 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
---height '780' \
+--height '720' \
+--width '1000' \
 --position 'centre' \
 --quitkey k \
 --bannerimage \"$bannerImage\" \
 --bannertext \"$bannerText\" \
---overlayicon \"$overlayicon\" \
 --helpmessage \"$helpmessage\" \
 --infobox \"#### Model  \n $model \n#### macOS version  \n $osversion \n#### Serial number  \n $serialNumber \n#### Current user  \n $loggedInUser \n#### Location \n $location \" \
 --button1disabled"
