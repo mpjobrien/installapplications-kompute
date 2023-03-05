@@ -40,17 +40,17 @@
     },
     {
       "donotwait": true,
-      "file": "/Library/installapplications/userscripts/Installomator-1stRun-Bootstrap.sh",
+      "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
       "hash": "bf771926ec38f085e988fe89c8dac9cd84b073ad66f68c655b7619dcda022b78",
       "name": "Kompute 1st Run",
-      "type": "userscript",
+      "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun-Bootstrap.sh"
     },
     {
-      "file": "/Library/installapplications/userscripts/Installomator-1stRunDialogProgress.sh",
+      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
       "hash": "73867d7e7e3affec165ca7e80d2569fc9829201de1262260188aa45bea917419",
       "name": "Kompute 1st Run Dialog Progress",
-      "type": "userscript",
+      "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
     }
   ]
