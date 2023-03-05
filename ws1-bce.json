@@ -32,21 +32,6 @@
   "userland": [
     {
       "donotwait": true,
-      "file": "/Library/installapplications/caffeinate.py",
-      "hash": "f0b524e794c3ba0cef1e9308cf0c0669d7cb090e4b690ce20360607be810f6c6",
-      "name": "Caffeinate Machine",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/caffeinate.py"
-    },
-    {
-      "donotwait": true,
-      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
-      "hash": "a67750864f0692f0def41335f5221aa118dedd795a9ccbd9fdf64ee8d090fe7e",
-      "name": "Kompute 1st Run Dialog Progress",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
-    },
-    {
       "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
       "hash": "3b06658f86802fed5191f4928c0aa97f745a570be4423fd92f96ea40fefc4690",
       "name": "Kompute 1st Run",
@@ -54,11 +39,25 @@
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun-Bootstrap.sh"
     },
     {
-      "file": "/Library/installapplications/dockutil-BCEstaff.sh",
-      "hash": "e07a4f9f4cf0f567fbf997082b3e8922b745d49ec3b6087f0488aefc6cb7c487",
-      "name": "Dockutil - BCE Staff",
+      "file": "/Library/installapplications/caffeinate.py",
+      "hash": "f0b524e794c3ba0cef1e9308cf0c0669d7cb090e4b690ce20360607be810f6c6",
+      "name": "Caffeinate Machine",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/dockutil-BCEstaff.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/caffeinate.py"
+    },
+    {
+      "file": "/Library/installapplications/dockutil-1stRun-BCEstaff.sh",
+      "hash": "c92a1a9112d7e27e1caf380c8dc76dc045d83ebfd02566412dd9ad4247eddb00",
+      "name": "Dockutil - 1st Run - BCE Staff",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/dockutil-1stRun-BCEstaff.sh"
+    },
+    {
+      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
+      "hash": "a67750864f0692f0def41335f5221aa118dedd795a9ccbd9fdf64ee8d090fe7e",
+      "name": "Kompute 1st Run Dialog Progress",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
     }
   ]
 }
