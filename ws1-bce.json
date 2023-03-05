@@ -1,0 +1,65 @@
+{
+  "preflight": [],
+  "setupassistant": [
+    {
+      "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
+      "hash": "5bf646d8f346682bfa95db6bd49f948b8f0163b309e0646c493a1cb0c8eae426",
+      "name": "VMware Workspace ONE Intelligent Hub",
+      "packageid": "com.airwatch.munki.core",
+      "type": "package",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com/VMwareWorkspaceONEIntelligentHub.pkg",
+      "version": "5.7.3.482"
+    },
+    {
+      "file": "/Library/installapplications/Installomator-10.3.pkg",
+      "hash": "9f47b332e31207e056e350d87fbb70c838005640bacc742ce0101fd8965bb50e",
+      "name": "Installomator",
+      "packageid": "com.scriptingosx.Installomator",
+      "type": "package",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com/Installomator-10.3.pkg",
+      "version": "10.3"
+    },
+    {
+      "file": "/Library/installapplications/dialog-2.1.0-4148.pkg",
+      "hash": "1563b0342709a140d63d76b0644c2cf33f32b7770af5998e66dc9bfbb18965d1",
+      "name": "Dialog",
+      "packageid": "au.csiro.dialogcli",
+      "type": "package",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com/dialog-2.1.0-4148.pkg",
+      "version": "2.1.0"
+    },
+    {
+      "file": "/Library/installapplications/dockutil-3.0.2.pkg",
+      "hash": "175137ea747e83ed221d60b18b712b256ed31531534cde84f679487d337668fd",
+      "name": "Dockutil",
+      "packageid": "dockutil.cli.tool",
+      "type": "package",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com/dockutil-3.0.2.pkg",
+      "version": "3.0.2"
+    }
+  ],
+  "userland": [
+    {
+      "file": "/Library/installapplications/userscripts/Installomator-1stRun.sh",
+      "hash": "3821e17a1682c0135470c18b6dc31f7a95a78c826e670097318dd9b03f5fa0e9",
+      "name": "Kompute 1st Run",
+      "type": "userscript",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com//scripts/user/Installomator-1stRun.sh"
+    },
+    {
+      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
+      "hash": "73867d7e7e3affec165ca7e80d2569fc9829201de1262260188aa45bea917419",
+      "name": "Kompute 1st Run Dialog Progress",
+      "type": "rootscript",
+      "url": "./scripts/user/Installomator-1stRunDialogProgress.sh"
+    },
+    {
+      "donotwait": true,
+      "file": "/Library/installapplications/caffeinate.py",
+      "hash": "f0b524e794c3ba0cef1e9308cf0c0669d7cb090e4b690ce20360607be810f6c6",
+      "name": "Caffeinate Machine",
+      "type": "rootscript",
+      "url": "https://kompute-installapplications.s3.ap-southeast-2.amazonaws.com//scripts/root/caffeinate.py"
+    }
+  ]
+}
