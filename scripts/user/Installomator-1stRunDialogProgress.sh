@@ -7,16 +7,11 @@ LOGO="ws1" # "appstore", "jamf", "mosyleb", "mosylem", "addigy", "microsoft", "w
 
 apps=(
 #    "swiftDialog,/usr/local/bin/dialog"
-    "Microsoft Edge,/Applications/Microsoft Edge.app"
-    "Microsoft Teams,/Applications/Microsoft Teams.app"
-    "Microsoft OneDrive,/Applications/OneDrive.app"
+    "Web Browsers,/Applications/Google Chrome.app"
     "Microsoft 365 Suite,/Applications/Microsoft Word.app"
     "Adobe Creative Cloud,/Applications/Utilities/Adobe Creative Cloud/ACC/Creative Cloud.app"
-    "VLC,/Applications/VLC.app"
-    "Support App,/Applications/Support.app"
-    "iMovie,/Applications/iMovie.app"
-    "Keynote,/Applications/Keynote.app"
-    "Pages,/Applications/Pages.app"
+    "Video Tools,/Applications/VLC.app"
+    "Support Tools,/Applications/Support.app"
     "Dock Configuration,/usr/local/bin/dockutil"
     "Desktop Presets,/usr/local/bin/desktoppr"
 )
@@ -58,14 +53,14 @@ fi
 
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
-message="Please wait while we download and install the needed software."
-endMessage="All done! Please reboot now to activate FileVault and complete installtion."
-displayEndMessageDialog=0 # Should endMessage be shown as a dialog? (0|1)
+message="Please wait while we install your required software. Process can take up to 30 minutes."
+endMessage="All done! Please reboot now to activate FileVault and complete installation."
+displayEndMessageDialog=1 # Should endMessage be shown as a dialog? (0|1)
 errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
 bannerText="Welcome to your new Mac, ${loggedInUserFirstname}!"
 overlayicon="/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/AppIcon.icns"
-helpmessage="If you need assistance, please contact the Global Service Department:  \n- **Telephone:** +1 (801) 555-1212  \n- **Email:** support@domain.org  \n- **Knowledge Base Article:** KB0057050  \n\n**Computer Information:** \n\n- **Operating System:**  ${macOSproductVersion} ($macOSbuildVersion)  \n- **Serial Number:** ${serialNumber}  \n- **Dialog:** ${dialogVersion}  \n- **Started:** ${timestamp}"
+helpmessage="If you need assistance, please contact your IT Team:  \n- **Email:** schoolhelp@bne.catholic.edu.au \n\n**Computer Information:** \n\n- **Operating System:**  ${macOSproductVersion} ($macOSbuildVersion)  \n- **Serial Number:** ${serialNumber}  \n- **Dialog:** ${dialogVersion}  \n- **Started:** ${timestamp}"
 infobox="Analyzing input …" # Customize at "Update Setup Your Mac's infobox"
 loggedInUser=$( scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
 serialNumber=$(system_profiler SPHardwareDataType | awk '/Serial Number/{print $4}')
@@ -385,7 +380,7 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 --bannertext \"$bannerText\" \
 --overlayicon \"$overlayicon\" \
 --helpmessage \"$helpmessage\" \
---infobox \"#### Model  \n $model \n#### macOS version  \n $osversion \n#### Serial number  \n $serialNumber \n#### Current user  \n $loggedInUser \n#### Site Code \n $sitecode \n#### Location \n $location \" \
+--infobox \"#### Model  \n $model \n#### macOS version  \n $osversion \n#### Serial number  \n $serialNumber \n#### Current user  \n $loggedInUser \n#### Location \n $location \" \
 --button1disabled"
 
 # create the list of apps
