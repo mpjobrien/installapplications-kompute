@@ -5,7 +5,7 @@ instance="" # Name of used instance
 
 LOGO="" # "appstore", "jamf", "mosyleb", "mosylem", "addigy", "microsoft", "ws1"
 
-items=(microsoftedge googlechromepkg microsoftteams microsoftonedrive microsoftoffice365 adobecreativeclouddesktop handbrake vlc supportapp desktoppr)
+items=(microsoftedge googlechromepkg microsoftofficebusinesspro adobecreativeclouddesktop handbrake vlc supportapp ricohpsprinters desktoppr)
 # Remember: dialog dockutil
 
 installomatorOptions="NOTIFY=silent BLOCKING_PROCESS_ACTION=ignore INSTALL=force IGNORE_APP_STORE_APPS=yes LOGGING=REQ"

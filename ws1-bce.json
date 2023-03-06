@@ -39,15 +39,8 @@
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
     },
     {
-      "file": "/Library/installapplications/caffeinate.py",
-      "hash": "f0b524e794c3ba0cef1e9308cf0c0669d7cb090e4b690ce20360607be810f6c6",
-      "name": "Caffeinate Machine",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/caffeinate.py"
-    },
-    {
       "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
-      "hash": "3b06658f86802fed5191f4928c0aa97f745a570be4423fd92f96ea40fefc4690",
+      "hash": "603dbef9070a4195a5b228b64a1fd2113c91c5fb21ca571c264a6c490f20bb26",
       "name": "Kompute 1st Run",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun-Bootstrap.sh"
