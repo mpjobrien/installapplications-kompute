@@ -33,7 +33,7 @@
       "hash": "089b852d070dee835ac10c0aa9eeb34b665d38b3fa8c0ffdf846b90e156eaedc",
       "name": "Install Rosetta",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/RRosetta-Install.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Rosetta-Install.sh"
     },
     {
       "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
