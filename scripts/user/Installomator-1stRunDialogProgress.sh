@@ -55,8 +55,8 @@ fi
 
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
-message="Please wait while we install your required software. Process can take up to 30 minutes."
-endMessage="All done! Please reboot now to activate FileVault and complete installation."
+message="Please wait while we install your required software. This process can take up to 30 minutes."
+endMessage="All done! Rebooting now. Please activate FileVault when requested 😊"
 displayEndMessageDialog=1 # Should endMessage be shown as a dialog? (0|1)
 errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
@@ -375,7 +375,7 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
---height '720' \
+--height '690' \
 --width '1000' \
 --position 'centre' \
 --quitkey k \
