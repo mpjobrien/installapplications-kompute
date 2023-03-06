@@ -27,16 +27,13 @@
       "type": "package",
       "url": "https://github.com/mpjobrien/installapplications-kompute/raw/main/pkgs/dockutil-3.0.2.pkg",
       "version": "3.0.2"
-    }
-  ],
-  "userland": [
+    },
     {
-      "donotwait": true,
-      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
-      "hash": "c4403e62dd307fe7af8a6d1e5477cb1fa7651d4a7b0a9f482794ec285f3bf0cf",
-      "name": "Kompute 1st Run Dialog Progress",
+      "file": "/Library/installapplications/Rosetta-Install.sh",
+      "hash": "089b852d070dee835ac10c0aa9eeb34b665d38b3fa8c0ffdf846b90e156eaedc",
+      "name": "Install Rosetta",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/RRosetta-Install.sh"
     },
     {
       "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
@@ -46,20 +43,30 @@
       "type": "package",
       "url": "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
       "version": "5.7.3.482"
+    }
+  ],
+  "userland": [
+    {
+      "donotwait": true,
+      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
+      "hash": "c4403e62dd307fe7af8a6d1e5477cb1fa7651d4a7b0a9f482794ec285f3bf0cf",
+      "name": "Kompute 1st Run Dialog Progress",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogProgress.sh"
     },
     {
       "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
       "hash": "603dbef9070a4195a5b228b64a1fd2113c91c5fb21ca571c264a6c490f20bb26",
       "name": "Kompute 1st Run",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRun-Bootstrap.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRun-Bootstrap.sh"
     },
     {
       "file": "/Library/installapplications/dockutil-1stRun-BCEstaff.sh",
       "hash": "c92a1a9112d7e27e1caf380c8dc76dc045d83ebfd02566412dd9ad4247eddb00",
       "name": "Dockutil - 1st Run - BCE Staff",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/dockutil-1stRun-BCEstaff.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/dockutil-1stRun-BCEstaff.sh"
     }
   ]
 }
