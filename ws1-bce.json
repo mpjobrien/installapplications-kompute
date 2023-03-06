@@ -2,15 +2,6 @@
   "preflight": [],
   "setupassistant": [
     {
-      "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
-      "hash": "5bf646d8f346682bfa95db6bd49f948b8f0163b309e0646c493a1cb0c8eae426",
-      "name": "WS1 Intelligent Hub",
-      "packageid": "com.airwatch.munki.core",
-      "type": "package",
-      "url": "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
-      "version": "5.7.3.482"
-    },
-    {
       "file": "/Library/installapplications/Installomator-10.3.pkg",
       "hash": "9f47b332e31207e056e350d87fbb70c838005640bacc742ce0101fd8965bb50e",
       "name": "Installomator",
@@ -46,6 +37,15 @@
       "name": "Kompute 1st Run Dialog Progress",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogProgress.sh"
+    },
+    {
+      "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
+      "hash": "5bf646d8f346682bfa95db6bd49f948b8f0163b309e0646c493a1cb0c8eae426",
+      "name": "WS1 Intelligent Hub",
+      "packageid": "com.airwatch.munki.core",
+      "type": "package",
+      "url": "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
+      "version": "5.7.3.482"
     },
     {
       "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
