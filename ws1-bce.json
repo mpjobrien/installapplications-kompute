@@ -63,7 +63,7 @@
     },
     {
       "file": "/Library/installapplications/dockutil-1stRun-BCEstaff.sh",
-      "hash": "c92a1a9112d7e27e1caf380c8dc76dc045d83ebfd02566412dd9ad4247eddb00",
+      "hash": "0f749698f16b1e8657aae255646092a3180f5322c0960a2c25c47c9f9b6428e9",
       "name": "Dockutil - 1st Run - BCE Staff",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/dockutil-1stRun-BCEstaff.sh"

@@ -78,9 +78,6 @@ apps=(
 "/Applications/Microsoft Teams.app"
 "/Applications/Classroom.app"
 "/System/Applications/Freeform.app"
-"/System/Applications/iMovie.app"
-"/Applications/Keynote.app"
-"/Applications/Pages.app"
 "/System/Applications/System Settings.app"
 )
 
