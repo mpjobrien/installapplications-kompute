@@ -67,6 +67,13 @@
       "name": "Dockutil - 1st Run - BCE Staff",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/dockutil-1stRun-BCEstaff.sh"
+    },
+    {
+      "file": "/Library/installapplications/Installomator-1stRunDialogComplete.sh",
+      "hash": "f5c8ea476e524a171f2d2a17481911a4ffc1df31323cfb0f6e70aba8945328fd",
+      "name": "Kompute 1st Run Dialog Complete",
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogComplete.sh"
     }
   ]
 }
