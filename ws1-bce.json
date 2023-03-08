@@ -49,7 +49,7 @@
     {
       "donotwait": true,
       "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
-      "hash": "FILE NOT FOUND - CHECK YOUR PATH",
+      "hash": "c4403e62dd307fe7af8a6d1e5477cb1fa7651d4a7b0a9f482794ec285f3bf0cf",
       "name": "Kompute 1st Run Dialog Progress",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogProgress.sh"
