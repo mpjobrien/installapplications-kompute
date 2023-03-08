@@ -42,7 +42,7 @@ fi
 
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
-message="## All done! \n A restart is required to complete the setup process. \n Please enter your password when requested to activate Filevault. \n Thanks!! 😊"
+message="## All done!  \n\n A restart is required to complete the setup process and activate FileVault.  \n\n For any support requests please email **schoolhelp@bne.catholic.edu.au**. \n\n We hope you enjoy your new Mac! 😊 \n\n ❤️ Kompute"
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
 bannerText="Enjoy your new Mac!"
 infobox="Analyzing input …" # Customize at "Update Setup Your Mac's infobox"
@@ -55,7 +55,7 @@ $dialogApp -p --title $title \
 --message "$message" \
 --icon $LOGO_PATH \
 --button1text "Restart Now" \
---button1shellaction "shutdown -r now"
+--button1shellaction "shutdown -r now" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \

@@ -56,13 +56,13 @@ fi
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
 message="Please wait while we install your required software. This process can take up to 30 minutes."
-endMessage="All done! Rebooting now. Please activate FileVault when requested 😊"
+endMessage="All done! 🥳"
 displayEndMessageDialog=1 # Should endMessage be shown as a dialog? (0|1)
 errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
 bannerText="Welcome to your new Mac, ${loggedInUserFirstname}!"
 overlayicon="/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/AppIcon.icns"
-helpmessage="If you need assistance, please contact the IT:  \n- **Telephone:** +1 (801) 555-1212  \n- **Email:** schoolhelp@bne.catholic.edu.au  \n- **Knowledge Base Article:** KB0057050  \n\n**Computer Information:** \n\n- **Operating System:**  ${macOSproductVersion} ($macOSbuildVersion)  \n- **Serial Number:** ${serialNumber}  \n- **Dialog:** ${dialogVersion}  \n- **Started:** ${timestamp}"
+helpmessage="If you need assistance, please email schoolhelp@bne.catholic.edu.au"
 infobox="Analyzing input …" # Customize at "Update Setup Your Mac's infobox"
 loggedInUser=$( scutil <<< "show State:/Users/ConsoleUser" | awk '/Name :/ && ! /loginwindow/ { print $3 }' )
 serialNumber=$(system_profiler SPHardwareDataType | awk '/Serial Number/{print $4}')
