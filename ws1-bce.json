@@ -76,11 +76,11 @@
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/dockutil-1stRun-BCEstaff.sh"
     },
     {
-      "file": "/Library/installapplications/userscripts/Installomator-1stRunDialogComplete.sh",
-      "hash": "f5c8ea476e524a171f2d2a17481911a4ffc1df31323cfb0f6e70aba8945328fd",
+      "file": "/Library/installapplications/Installomator-1stRunDialogComplete.sh",
+      "hash": "6fd39e8dd6d569f2221ac5fd43440fb01b02a6f207ccbbf812820af0584e7b97",
       "name": "Kompute 1st Run Dialog Complete",
-      "type": "userscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/Installomator-1stRunDialogComplete.sh"
+      "type": "rootscript",
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogComplete.sh"
     }
   ]
 }

@@ -54,7 +54,8 @@ model=$(system_profiler SPHardwareDataType | grep "Model Name:" | sed 's/Model N
 $dialogApp -p --title $title \
 --message "$message" \
 --icon $LOGO_PATH \
---button1text "Exit" \
+--button1text "Restart Now" \
+--button1shellaction "shutdown -r now"
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
