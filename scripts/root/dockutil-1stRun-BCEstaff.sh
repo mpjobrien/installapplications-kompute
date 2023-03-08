@@ -75,7 +75,6 @@ apps=(
 "/Applications/Microsoft OneNote.app"
 "/Applications/Microsoft Powerpoint.app"
 "/Applications/Microsoft Excel.app"
-"/Applications/Microsoft Teams.app"
 "/Applications/Classroom.app"
 "/System/Applications/Freeform.app"
 "/System/Applications/System Settings.app"
