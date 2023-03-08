@@ -77,7 +77,7 @@
     },
     {
       "file": "/Library/installapplications/Installomator-1stRunDialogComplete.sh",
-      "hash": "919e4cefb8d18c7e8608049e8e83887ef1803d995644c00d17dfbfe8aee1c095",
+      "hash": "a8b4984f85f1469bed5c6610316dfa340c4fcbf8a61364869fe03153f1f61b22",
       "name": "Kompute 1st Run Dialog Complete",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogComplete.sh"

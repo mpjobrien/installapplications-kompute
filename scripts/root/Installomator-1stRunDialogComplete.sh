@@ -55,7 +55,7 @@ $dialogApp -p --title $title \
 --message "$message" \
 --icon $LOGO_PATH \
 --button1text "Restart Now" \
---button1shellaction "shutdown -r now" \
+--button1shellaction "sudo shutdown -r now" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
