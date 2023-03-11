@@ -371,12 +371,11 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 --icon \"$LOGO_PATH\" \
 --progress $progress_total \
 --button1text \"Please Wait\" \
---blurscreen \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
---height '690' \
---width '1000' \
+--height '700' \
+--width '700' \
 --position 'centre' \
 --quitkey k \
 --bannerimage \"$bannerImage\" \

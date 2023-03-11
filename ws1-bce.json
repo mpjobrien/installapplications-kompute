@@ -49,7 +49,7 @@
     {
       "donotwait": true,
       "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
-      "hash": "d3a4ebdeb60e9e6611d9729e63dface888f01104ccce05feed836ed78de0ef80",
+      "hash": "46518b46c60d3ce3b5d42d282506e671cd5256ee26aaed4d465a97b93d780deb",
       "name": "Kompute 1st Run Dialog Progress",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogProgress.sh"
@@ -60,13 +60,6 @@
       "name": "WS1 Sync",
       "type": "userscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/WS1-HubSync.sh"
-    },
-    {
-      "file": "/Library/installapplications/Installomator-1stRun-Bootstrap.sh",
-      "hash": "603dbef9070a4195a5b228b64a1fd2113c91c5fb21ca571c264a6c490f20bb26",
-      "name": "Kompute 1st Run",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRun-Bootstrap.sh"
     },
     {
       "file": "/Library/installapplications/dockutil-1stRun-BCEstaff.sh",
