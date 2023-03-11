@@ -47,33 +47,11 @@
   ],
   "userland": [
     {
-      "donotwait": true,
-      "file": "/Library/installapplications/Installomator-1stRunDialogProgress.sh",
-      "hash": "46518b46c60d3ce3b5d42d282506e671cd5256ee26aaed4d465a97b93d780deb",
-      "name": "Kompute 1st Run Dialog Progress",
+      "file": "/Library/installapplications/kompute-1stRun-WS1BCE.sh",
+      "hash": "7e96f5ad450d74373fee1688a1aacf30eea5d32728787081fd9b46460aa58bc9",
+      "name": "Kompute 1st Run",
       "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogProgress.sh"
-    },
-    {
-      "file": "/Library/installapplications/userscripts/WS1-HubSync.sh",
-      "hash": "f49ce3a657bba55bfe865cc6e93b9dc5beffc920872feb0a07f3fcd700e1c110",
-      "name": "WS1 Sync",
-      "type": "userscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/user/WS1-HubSync.sh"
-    },
-    {
-      "file": "/Library/installapplications/dockutil-1stRun-BCEstaff.sh",
-      "hash": "61a2118d2362759c8640680b0ee68d0d51ebf2161dc160423e86238eaea4d341",
-      "name": "Dockutil - 1st Run - BCE Staff",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/dockutil-1stRun-BCEstaff.sh"
-    },
-    {
-      "file": "/Library/installapplications/Installomator-1stRunDialogComplete.sh",
-      "hash": "a8b4984f85f1469bed5c6610316dfa340c4fcbf8a61364869fe03153f1f61b22",
-      "name": "Kompute 1st Run Dialog Complete",
-      "type": "rootscript",
-      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/Installomator-1stRunDialogComplete.sh"
+      "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/kompute-1stRun-WS1BCE.sh"
     }
   ]
 }

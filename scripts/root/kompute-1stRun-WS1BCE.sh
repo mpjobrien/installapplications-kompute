@@ -1,5 +1,20 @@
 #!/bin/sh
 
+############################################################
+# Kick off a sync to WS1 via hubcli
+############################################################
+
+if [ -e "/usr/local/bin/hubcli" ]; then
+    /usr/local/bin/hubcli sync
+else
+    echo "hubcli not installed!"
+fi
+
+
+############################################################
+# Swift Dialog progress
+############################################################
+
 # Progress 1st with swiftDialog (auto installation at enrollment)
 instance="" # Name of used instance
 
@@ -54,7 +69,7 @@ fi
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
 message="Please wait while we install your required software. This process can take up to 30 minutes."
-endMessage="All done! 🥳 Please restart to acticate FileVault."
+endMessage="All done! Please restart now to activate FileVault."
 displayEndMessageDialog=1 # Should endMessage be shown as a dialog? (0|1)
 errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
@@ -173,50 +188,6 @@ step_progress=0
 defaults write $counterFile step -int 0
 progress_total=${#apps[@]}
 printlog "Total watched installations: $progress_total"
-
-# Using LOGO variable to specify MDM and shown logo
-#case $LOGO in
-#    appstore)
-#        if [[ $(sw_vers -buildVersion) > "19" ]]; then
-#            LOGO_PATH="/System/Applications/App Store.app/Contents/Resources/AppIcon.icns"
-#        else
-#            LOGO_PATH="/Applications/App Store.app/Contents/Resources/AppIcon.icns"
-#        fi
-#        ;;
-#    jamf)
-#        # Jamf Pro
-#        LOGO_PATH="/Library/Application Support/JAMF/Jamf.app/Contents/Resources/AppIcon.icns"
-#        ;;
-#    mosyleb)
-#        # Mosyle Business
-#        LOGO_PATH="/Applications/Self-Service.app/Contents/Resources/AppIcon.icns"
-#        ;;
-#    mosylem)
-#        # Mosyle Manager (education)
-#        LOGO_PATH="/Applications/Manager.app/Contents/Resources/AppIcon.icns"
-#        ;;
-#    addigy)
-#        # Addigy
-#        LOGO_PATH="/Library/Addigy/macmanage/MacManage.app/Contents/Resources/atom.icns"
-#        ;;
-#    microsoft)
-#        # Microsoft Endpoint Manager (Intune)
-#        LOGO_PATH="/Library/Intune/Microsoft Intune Agent.app/Contents/Resources/AppIcon.icns"
-#        ;;
-#    ws1)
-#        # Workspace ONE (AirWatch)
-#        LOGO_PATH="/Applications/Workspace ONE Intelligent Hub.app/Contents/Resources/AppIcon.icns"
-#        ;;
-#esac
-#if [[ ! -a "${LOGO_PATH}" ]]; then
-#    printlog "ERROR in LOGO_PATH '${LOGO_PATH}', setting Mac App Store."
-#    if [[ $(/usr/bin/sw_vers -buildVersion) > "19" ]]; then
-#        LOGO_PATH="/System/Applications/App Store.app/Contents/Resources/AppIcon.icns"
-#    else
-#        LOGO_PATH="/Applications/App Store.app/Contents/Resources/AppIcon.icns"
-#    fi
-#fi
-#printlog "LOGO: $LOGO – LOGO_PATH: $LOGO_PATH"
 
 # Mark: Functions
 # execute a dialog command
@@ -356,24 +327,17 @@ currentUser=$(stat -f "%Su" /dev/console)
 currentUserID=$(id -u "$currentUser")
 printlog "Logged in user is $currentUser with ID $currentUserID"
 
-# set icon based on whether computer is a desktop or laptop
-#hwType=$(system_profiler SPHardwareDataType | grep "Model Identifier" | grep "Book" || true)
-#if [ "$hwType" != "" ]; then
-#    LOGO_PATH="SF=laptopcomputer.and.arrow.down,weight=thin,colour1=#51a3ef,colour2=#5154ef"
-#else
-#    LOGO_PATH="SF=desktopcomputer.and.arrow.down,weight=thin,colour1=#51a3ef,colour2=#5154ef"
-#fi
-
 dialogCMD="$dialogApp -p --title \"$title\" \
 --message \"$message\" \
 --icon \"$LOGO_PATH\" \
 --progress $progress_total \
 --button1text \"Please Wait\" \
+--button1shellaction \"sudo shutdown -r now\" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
 --height '700' \
---width '700' \
+--width '1000' \
 --position 'centre' \
 --quitkey k \
 --bannerimage \"$bannerImage\" \
@@ -420,7 +384,7 @@ fi
 printlog "Finalizing."
 dialog_command "progresstext: $endMessage"
 dialog_command "progress: complete"
-dialog_command "button1text: Done"
+dialog_command "button1text: Restart"
 dialog_command "button1: enable"
 
 if [[ $displayEndMessageDialog -eq 1 ]]; then
@@ -434,28 +398,13 @@ printlog $(rm -fv $counterFile || true)
 
 printlog "Ending"
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
-# 
-# version 2.0
-# Written by: Mischa van der Bent
-#
-# Permission is granted to use this code in any way you want.
-# Credit would be nice, but not obligatory.
-# Provided "as is", without warranty of any kind, express or implied.
-#
-# DESCRIPTION
-# This script configures users docks using docktutil
-# source dockutil https://github.com/kcrawford/dockutil/
-# 
-# REQUIREMENTS
-# dockutil Version 3.0.0 or higher installed to /usr/local/bin/
-# Compatible with macOS 11.x and higher
-#
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # 
+############################################################
+# Configure dock w/ dockutil
+############################################################
+
 
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin
 
-# COLLECT IMPORTANT USER INFORMATION
 # Get the currently logged in user
 currentUser=$( echo "show State:/Users/ConsoleUser" | scutil | awk '/Name :/ { print $3 }' )
 
@@ -521,22 +470,13 @@ do
 
 done
 
-# Add Application Folder to the Dock
-# runAsUser "${dockutil}" --add /Applications --view grid --display folder --sort name --no-restart ${plist}
-
 # Add logged in users Downloads folder to the Dock
 runAsUser "${dockutil}" --add ${userHome}/Downloads --view list --display stack --sort dateadded --no-restart ${plist}
 
-# Disable show recent
-# runAsUser defaults write com.apple.dock show-recents -bool FALSE
-# echo "Hide show recent from the Dock"
-
-# sleep 3
+sleep 1
 
 # Kill dock to use new settings
 killall -KILL Dock
 echo "Restarted the Dock"
 
 echo "Finished creating default Dock"
-
-exit 0
