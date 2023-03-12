@@ -1,4 +1,13 @@
-#!/bin/sh
+#!/bin/zssh
+
+
+############################################################
+# Ensure computer does not go to sleep while running
+############################################################
+
+echo "Caffeinating this script (PID: $$)"
+caffeinate -dimsu -w $$ &
+
 
 ############################################################
 # Kick off a sync to WS1 via hubcli
@@ -69,7 +78,7 @@ fi
 # Dialog display settings, change as desired
 title="Installing Apps and other software"
 message="Please wait while we install your required software. This process can take up to 30 minutes."
-endMessage="All done! Please restart now to activate FileVault."
+endMessage="All done! Your Mac will automatically restart. Please activate FileVault when prompted."
 displayEndMessageDialog=1 # Should endMessage be shown as a dialog? (0|1)
 errorMessage="A problem was encountered setting up this Mac. Please contact IT."
 bannerImage="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/a2338162-9d59-427b-93d2-9bb060e9d035/dialog-header-bce.png"
@@ -332,7 +341,6 @@ dialogCMD="$dialogApp -p --title \"$title\" \
 --icon \"$LOGO_PATH\" \
 --progress $progress_total \
 --button1text \"Please Wait\" \
---button1shellaction \"sudo shutdown -r now\" \
 --ontop \
 --titlefont 'shadow=false, size=36' \
 --messagefont 'size=14' \
@@ -384,13 +392,8 @@ fi
 printlog "Finalizing."
 dialog_command "progresstext: $endMessage"
 dialog_command "progress: complete"
-dialog_command "button1text: Restart"
-dialog_command "button1: enable"
+dialog_command "button1text: Restarting..."
 
-if [[ $displayEndMessageDialog -eq 1 ]]; then
-    message="$endMessage"
-    displayDialog &
-fi
 
 sleep 1
 printlog $(rm -fv $dialog_command_file || true)
@@ -480,3 +483,23 @@ killall -KILL Dock
 echo "Restarted the Dock"
 
 echo "Finished creating default Dock"
+
+
+############################################################
+# Cleanup running dialogs & restart
+############################################################
+
+sleep 10
+
+killall Dialog
+
+sleep 1
+/usr/bin/su - "${loggedInUser}" -c "/usr/bin/osascript -e 'tell app \"loginwindow\" to «event aevtrrst»'"
+
+
+
+
+
+
+
+
