@@ -56,11 +56,11 @@ fi
 #Determine WS1 GroupID to determine OG & Location
 sitecode=$(defaults read /Library/Managed\ Preferences/com.kompute.ws1.UserDetails.plist GroupIdentifier | cut -c 4-)
 
-if [[ sitecode="PBAR" ]]; then 
+if [[ ${sitecode} = "PBAR" ]]; then 
     location="St Joseph's Bardon"
-elif [[ sitecode="PKED" ]]; then 
+elif [[ ${sitecode} = "PKED" ]]; then 
     location="St Anthony's Kedron"
-elif [[ sitecode="PMAG" ]]; then 
+elif [[ ${sitecode} = "PMAG" ]]; then 
     location="St Benedict's Mango Hill"
 else 
     sitecode="Brisbane Catholic Education"
@@ -68,11 +68,11 @@ fi
 
 #Set Location Logo
 
-if [[ sitecode="PBAR" ]]; then 
+if [[ ${sitecode} = "PBAR" ]]; then 
     LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PBAR.png"
-elif [[ sitecode="PKED" ]]; then 
+elif [[ ${sitecode} = "PKED" ]]; then 
     LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PKED.png"
-elif [[ sitecode="PMAG" ]]; then 
+elif [[ ${sitecode} = "PMAG" ]]; then 
     LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PMAG.png"
 else 
     LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-BCE.png"
