@@ -56,22 +56,26 @@ fi
 #Determine WS1 GroupID to determine OG & Location
 sitecode=$(defaults read /Library/Managed\ Preferences/com.kompute.ws1.UserDetails.plist GroupIdentifier | cut -c 4-)
 
-if [[ sitecode="PKED" ]]; then 
+if [[ sitecode="PBAR" ]]; then 
+    location="St Joseph's Bardon"
+elif [[ sitecode="PKED" ]]; then 
     location="St Anthony's Kedron"
 elif [[ sitecode="PMAG" ]]; then 
     location="St Benedict's Mango Hill"
-elif [[ sitecode="PBAR" ]]; then 
-    location="St Joseph's Bardon"
 else 
     sitecode="Brisbane Catholic Education"
 fi
 
 #Set Location Logo
 
-if [[ sitecode="PKED" ]]; then 
-    LOGO_PATH="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/e9a251fc-b392-46c7-af6a-09b33509d314/Logo-PKED.png"
+if [[ sitecode="PBAR" ]]; then 
+    LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PBAR.png"
+elif [[ sitecode="PKED" ]]; then 
+    LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PKED.png"
+elif [[ sitecode="PMAG" ]]; then 
+    LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-PMAG.png"
 else 
-    LOGO_PATH="https://images.squarespace-cdn.com/content/5f196055b939084eefc0d9fd/0c03b0c1-f953-4fea-b46a-dfb3f27eba9d/Logo-BCE.png"
+    LOGO_PATH="https://github.com/mpjobrien/installapplications-kompute/raw/main/enrollment-assets/Logo-BCE.png"
 fi
 
 

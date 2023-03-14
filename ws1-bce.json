@@ -48,7 +48,7 @@
   "userland": [
     {
       "file": "/Library/installapplications/kompute-1stRun-WS1BCE.sh",
-      "hash": "1f8fde53f9a8fed8acfb6589d7d0886db14efd82344a1703984846bac9df3f12",
+      "hash": "eb169677b4823dfd9b61636225970c25667370d22c7b23bf46cc018b847bb4fb",
       "name": "Kompute 1st Run",
       "type": "rootscript",
       "url": "https://raw.githubusercontent.com/mpjobrien/installapplications-kompute/main//scripts/root/kompute-1stRun-WS1BCE.sh"
