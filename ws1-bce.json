@@ -37,12 +37,12 @@
     },
     {
       "file": "/Library/installapplications/VMwareWorkspaceONEIntelligentHub.pkg",
-      "hash": "5bf646d8f346682bfa95db6bd49f948b8f0163b309e0646c493a1cb0c8eae426",
+      "hash": "36f5f3dbf9b46ab563e030c31810c0e8036a4b0b1853d29b00dd57924fa6020d",
       "name": "WS1 Intelligent Hub",
       "packageid": "com.airwatch.munki.core",
       "type": "package",
       "url": "https://packages.vmware.com/wsone/VMwareWorkspaceONEIntelligentHub.pkg",
-      "version": "5.7.3.482"
+      "version": "6.2.0.4671"
     }
   ],
   "userland": [
